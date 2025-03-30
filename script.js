@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Typed text effect for the hero section
   const typedElement = document.getElementById("typed");
   const phrases = ["Developer.", "Problem Solver.", "Web Enthusiast."];
   let phraseIndex = 0;

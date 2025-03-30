@@ -57,7 +57,6 @@ a:hover {
   color: #4caf50;
 }
 
-/* Sections */
 .section {
   padding: 120px 0 80px;
 }
@@ -78,7 +77,6 @@ a:hover {
   color: #4caf50;
 }
 
-/* About Section */
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -123,7 +121,6 @@ a:hover {
   border-radius: 20px;
 }
 
-/* Projects Section */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -168,13 +165,11 @@ a:hover {
   background: #66bb6a;
 }
 
-/* Contact Section */
 #contact p {
   text-align: center;
   font-size: 18px;
 }
 
-/* Footer */
 footer {
   background: #1a1a1a;
   padding: 20px 0;
@@ -185,12 +180,10 @@ footer p {
   color: #777;
 }
 
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;

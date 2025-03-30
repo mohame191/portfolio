@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading Journal App</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Trading Journal</h1>
+    <button id="darkModeToggle">Dark Mode</button>
+  </header>
+
+  <main>
+    <section id="addTradeSection">
+      <h2>Add Trade</h2>
+      <form id="tradeForm">
+        <div class="form-row">
+          <label for="tradeDate">Date:</label>
+          <input type="date" id="tradeDate" required>
+        </div>
+        <div class="form-row">
+          <label for="asset">Asset:</label>
+          <input type="text" id="asset" placeholder="e.g., AAPL" required>
+        </div>
+        <div class="form-row">
+          <label for="tradeType">Type:</label>
+          <select id="tradeType">
+            <option value="Buy">Buy</option>
+            <option value="Sell">Sell</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="entryPrice">Entry Price:</label>
+          <input type="number" id="entryPrice" step="0.01" required>
+        </div>
+        <div class="form-row">
+          <label for="exitPrice">Exit Price:</label>
+          <input type="number" id="exitPrice" step="0.01" required>
+        </div>
+        <div class="form-row">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" step="0.01" required>
+        </div>
+        <div class="form-row">
+          <label for="notes">Notes:</label>
+          <textarea id="notes" placeholder="Write your reflections..."></textarea>
+        </div>
+        <button type="submit">Add Trade</button>
+      </form>
+    </section>
+    <section id="tradeHistorySection">
+      <h2>Trade History</h2>
+      <table id="tradeTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Asset</th>
+            <th>Type</th>
+            <th>Entry</th>
+            <th>Exit</th>
+            <th>Quantity</th>
+            <th>P/L</th>
+            <th>Notes</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+    <section id="analyticsSection">
+      <h2>Performance Analytics</h2>
+      <div class="analytics">
+        <p>Total Trades: <span id="totalTrades">0</span></p>
+        <p>Win Rate: <span id="winRate">0%</span></p>
+        <p>Total P/L: <span id="totalPL">0</span></p>
+      </div>
+      <canvas id="performanceChart"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mohamed Ali. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

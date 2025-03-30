@@ -1,0 +1,160 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+  padding-bottom: 60px; /* For footer spacing */
+}
+body.dark {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2575fc;
+  color: white;
+  padding: 20px;
+}
+header h1 {
+  font-size: 24px;
+}
+#darkModeToggle {
+  padding: 10px 15px;
+  background: #6a11cb;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#darkModeToggle:hover {
+  background: #4caf50;
+}
+
+main {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+#addTradeSection {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+#addTradeSection h2 {
+  margin-bottom: 15px;
+}
+.form-row {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.form-row label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#tradeForm button {
+  padding: 10px 20px;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#tradeForm button:hover {
+  background: #6a11cb;
+}
+
+#tradeHistorySection {
+  margin-bottom: 30px;
+}
+#tradeHistorySection h2 {
+  margin-bottom: 15px;
+}
+#tradeTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+#tradeTable th, #tradeTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+#tradeTable th {
+  background: #2575fc;
+  color: white;
+}
+.action-btn {
+  padding: 5px 8px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.edit-btn {
+  background: #ff9800;
+  color: white;
+}
+.delete-btn {
+  background: #f44336;
+  color: white;
+}
+
+#analyticsSection {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+#analyticsSection h2 {
+  margin-bottom: 15px;
+}
+.analytics p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#performanceChart {
+  max-width: 100%;
+  height: 300px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #2575fc;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+body.dark #addTradeSection,
+body.dark #analyticsSection,
+body.dark #tradeHistorySection {
+  background: #1e1e1e;
+  border-color: #444;
+}
+body.dark #tradeTable th {
+  background: #444;
+}
